@@ -92,33 +92,33 @@ We learned the design and reused code from the following projects: [Guidance](ht
 
 SGLang exposes Prometheus-compatible metrics via the `/metrics` endpoint.
 
-### Metric Naming Convention
+## Metric Naming Convention
 
 Metrics are dynamically generated from internal dataclass fields:
 
-* **Core metrics**
+## Core metrics
 
   * `sglang_<field_name>`
 
-* **Section-specific metrics**
+## Section-specific metrics
 
-  * `sglang_memory_<field_name>` - Memory-related metrics
-  * `sglang_spec_<field_name>` - Speculative decoding metrics
-  * `sglang_lora_<field_name>` - LoRA-related metrics
-  * `sglang_disagg_<field_name>` - Disaggregated system metrics
-  * `sglang_queues_<field_name>` - Queue-related metrics
+  * `sglang_memory_<field_name>`
+  * `sglang_spec_<field_name>`
+  * `sglang_lora_<field_name>`
+  * `sglang_disagg_<field_name>`
+  * `sglang_queues_<field_name>`
 
 ### Important Notes
 
 * Older Grafana dashboards may use outdated metric names.
 * The current system introduces prefixes for different metric sections.
 
-### Example
+## Example
 
 * Old: `sglang_token_usage`
 * New: `sglang_memory_token_usage`
 
-### Endpoints
+## Endpoints
 
 * `/metrics` → Prometheus metrics
-* `/v1/loads?format=prometheus` → extended metrics
+* `/v1/loads?format=prometheus` → extended metrics including detailed load, scheduling, and system-level statistics
