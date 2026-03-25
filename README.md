@@ -88,7 +88,7 @@ For enterprises interested in adopting or deploying SGLang at scale, including t
 ## Acknowledgment
 We learned the design and reused code from the following projects: [Guidance](https://github.com/guidance-ai/guidance), [vLLM](https://github.com/vllm-project/vllm), [LightLLM](https://github.com/ModelTC/lightllm), [FlashInfer](https://github.com/flashinfer-ai/flashinfer), [Outlines](https://github.com/outlines-dev/outlines), and [LMQL](https://github.com/eth-sri/lmql).
 
-## Metrics and Grafana Integration
+### Metrics and Grafana Integration
 
 SGLang exposes Prometheus-compatible metrics via the `/metrics` endpoint.
 
@@ -96,19 +96,19 @@ SGLang exposes Prometheus-compatible metrics via the `/metrics` endpoint.
 
 Metrics are dynamically generated from internal dataclass fields:
 
-## Core metrics
+### Core metrics
 
   * `sglang_<field_name>`
 
-## Section-specific metrics
+### Section-specific metrics
 
-  * `sglang_memory_<field_name>`
-  * `sglang_spec_<field_name>`
-  * `sglang_lora_<field_name>`
-  * `sglang_disagg_<field_name>`
-  * `sglang_queues_<field_name>`
+  * `sglang_memory_<field_name>` — metrics related to memory usage and allocation
+  * `sglang_spec_<field_name>` — speculative decoding metrics
+  * `sglang_lora_<field_name>` — LoRA (Low-Rank Adaptation) related metrics
+  * `sglang_disagg_<field_name>` — disaggregated execution metrics
+  * `sglang_queues_<field_name>` — request queue and scheduling metrics
 
-### Important Notes
+## Important Notes
 
 * Older Grafana dashboards may use outdated metric names.
 * The current system introduces prefixes for different metric sections.
