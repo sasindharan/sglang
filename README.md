@@ -102,11 +102,11 @@ Metrics are dynamically generated from internal dataclass fields:
 
 * **Section-specific metrics**
 
-  * `sglang_memory_<field_name>`
-  * `sglang_spec_<field_name>`
-  * `sglang_lora_<field_name>`
-  * `sglang_disagg_<field_name>`
-  * `sglang_queues_<field_name>`
+  * `sglang_memory_<field_name>` - Memory-related metrics
+  * `sglang_spec_<field_name>` - Speculative decoding metrics
+  * `sglang_lora_<field_name>` - LoRA-related metrics
+  * `sglang_disagg_<field_name>` - Disaggregated system metrics
+  * `sglang_queues_<field_name>` - Queue-related metrics
 
 ### Important Notes
 
